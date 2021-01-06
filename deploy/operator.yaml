@@ -86,6 +86,12 @@ spec:
               value: che-postgres-secret
             - name: CHE_SERVER_TRUST_STORE_CONFIGMAP_NAME
               value: ca-certs
+          resources:
+            limits:
+              memory: 256Mi
+              cpu: 100m
+            requests:
+              memory: 128Mi
       restartPolicy: Always
       serviceAccountName: che-operator
       terminationGracePeriodSeconds: 5
